@@ -28,6 +28,10 @@ function lotteryNumbers() {
     let lucky = numbers.sort((a, b) => a - b).join("-");
     // console.log(lucky);
     let ek1 = ((Math.floor(Math.random() * 90) + 1) + "").padStart(2, "0");
+    if (lucky.includes(ek1)) {
+        console.log(ek1);
+        ek1 = ((Math.floor(Math.random() * 90) + 1) + "").padStart(2, "0");  
+    };
     let ek2 = ((Math.floor(Math.random() * 90) + 1) + "").padStart(2, "0");
     let textp = lucky + " | " + ek1 + " | " + ek2;
     // console.log(textp);
